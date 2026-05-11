@@ -26,21 +26,21 @@ void Hyperbola::print(double x) {
     printf("f(%f) = %f\n", x, f(x));
 }
 
-double Hyperbola::minimum(double low, double hi, int steps) {
-    double minVal = f(low);
-    double step = (hi - low) / steps;
+double Hyperbola::minimum(double left, double right, int steps) {
+    double minVal = f(left);
+    double step = (right - left) / steps;
     for (int i = 1; i <= steps; i++) {
-        double val = f(low + i * step);
+        double val = f(left + i * step);
         if (val < minVal) minVal = val;
     }
     return minVal;
 }
 
-double Hyperbola::maximum(double low, double hi, int steps) {
-    double maxVal = f(low);
-    double step = (hi - low) / steps;
+double Hyperbola::maximum(double left, double right, int steps) {
+    double maxVal = f(left);
+    double step = (right - left) / steps;
     for (int i = 1; i <= steps; i++) {
-        double val = f(low + i * step);
+        double val = f(left + i * step);
         if (val > maxVal) maxVal = val;
     }
     return maxVal;
