@@ -24,21 +24,21 @@ void Parabola::print(double x) {
     printf("f(%f) = %f\n", x, f(x));
 }
 
-double Parabola::minimum(double lo, double hi, int steps) {
-    double minVal = f(lo);
-    double step = (hi - lo) / steps;
+double Parabola::minimum(double low, double hi, int steps) {
+    double minVal = f(low);
+    double step = (hi - low) / steps;
     for (int i = 1; i <= steps; i++) {
-        double val = f(lo + i * step);
+        double val = f(low + i * step);
         if (val < minVal) minVal = val;
     }
     return minVal;
 }
 
-double Parabola::maximum(double lo, double hi, int steps) {
-    double maxVal = f(lo);
-    double step = (hi - lo) / steps;
+double Parabola::maximum(double low, double hi, int steps) {
+    double maxVal = f(low);
+    double step = (hi - low) / steps;
     for (int i = 1; i <= steps; i++) {
-        double val = f(lo + i * step);
+        double val = f(low + i * step);
         if (val > maxVal) maxVal = val;
     }
     return maxVal;

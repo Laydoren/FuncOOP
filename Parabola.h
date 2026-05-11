@@ -9,6 +9,6 @@ public:
     double differentiate(double x);
     double integrate(double x);
     void   print(double x);
-    double minimum(double lo, double hi, int steps = 1000);
-    double maximum(double lo, double hi, int steps = 1000);
+    double minimum(double low, double hi, int steps = 1000);
+    double maximum(double low, double hi, int steps = 1000);
 };
