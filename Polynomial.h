@@ -1,14 +1,15 @@
 #pragma once
 #include "Function.h"
+#include <vector>
 
-class Parabola : public Function {
-    double a, b, c;
+class Polynomial : public Function {
+    std::vector<double> coeffs;
 public:
-    Parabola(double a, double b, double c);
+    Polynomial(const std::vector<double>& coefficients);
     double f(double x);
     double differentiate(double x);
     double integrate(double x);
-    void print(double x);
+    void   print(double x);
     double minimum(double left, double right, int steps = 1000);
     double maximum(double left, double right, int steps = 1000);
 };

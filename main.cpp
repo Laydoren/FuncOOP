@@ -1,6 +1,8 @@
 #include <cstdio>
 #include "Hyperbola.h"
 #include "Parabola.h"
+#include "Exponential.h"
+#include "Polynomial.h"
 
 using namespace std;
 
@@ -21,9 +23,13 @@ int main() {
     Parabola par(1.0, -4.0, 3.0);
     test(par, 2.0, -1.0, 5.0);
 
-    printf("Exp WIP\n");
+    printf("Exp\n");
+    Exponential exp(2.0, 0.5);
+    test(exp, 2.0, 0.0, 3.0);
 
-    printf("Polinom WIP\n");
+    printf("Polinom\n");
+    Polynomial poly({2.0, 5.0, 9.0});
+    test(poly, 2.0, -2.0, 2.0);
 
     return 0;
 }

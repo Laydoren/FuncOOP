@@ -1,10 +1,10 @@
 #pragma once
 #include "Function.h"
 
-class Parabola : public Function {
-    double a, b, c;
+class Exponential : public Function {
+    double a, b;
 public:
-    Parabola(double a, double b, double c);
+    Exponential(double a, double b);
     double f(double x);
     double differentiate(double x);
     double integrate(double x);
