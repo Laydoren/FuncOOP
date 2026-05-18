@@ -4,6 +4,8 @@
 #include <cmath>
 #include <stdexcept>
 
+using namespace std;
+
 class Function {
 public:
     virtual ~Function() = default;
